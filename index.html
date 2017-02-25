@@ -27,28 +27,14 @@
 <script src="scripts/smtp.js"></script>
 <script type="text/javascript">
 
-function send() {
+function signUp() {
 $.ajax({
     url: "https://formspree.io/james.horton2337@gmail.com", 
     method: "POST",
-    data: {message: "hello!"},
+    data: {message: "A new sign-up."},
     dataType: "json"
 });
 }
-
-
-function sendEmail() {
-alert("hi");
-Email.send("james.horton2337@gmail.com",
-"james.horton2337@gmail.com",
-"This is a subject",
-"this is the body",
-{token: "1d26d41c-e230-4ad8-b004-fc210659da2f"});
-}
-
-/* 
-yahoo d3b7c265-8d5b-43f1-9cd6-e4c689c7f4b3
-james 1d26d41c-e230-4ad8-b004-fc210659da2f */
 
 </script>
 	</head>
@@ -63,7 +49,7 @@ james 1d26d41c-e230-4ad8-b004-fc210659da2f */
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+					<a href="index.html" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -83,10 +69,9 @@ james 1d26d41c-e230-4ad8-b004-fc210659da2f */
 		<section id="home" class="text-center">
 		  <div class="templatemo_headerimage">
 		    <div class="flexslider">
-here<button class="btn" onclick="send()">sendemail</button>there
 		      <ul class="slides">
 		        <li>
-		        	<img src="images/slider/1.jpg" alt="Slide 1">
+		        	<img src="images/slider/2.jpg" alt="Slide 1">
 		        	<div class="slider-caption">
 					    <div class="templatemo_homewrapper">
 					      <h1 class="wow fadeInDown" data-wow-delay="2000">Cox Staffing Group</h1>
@@ -98,7 +83,7 @@ here<button class="btn" onclick="send()">sendemail</button>there
 				  	</div>
 		        </li>
 		        <li>
-		        	<img src="images/slider/2.jpg" alt="Slide 2">
+		        	<img src="images/slider/1.jpg" alt="Slide 2">
 		        	<div class="slider-caption">
 					    <div class="templatemo_homewrapper">
 					      <h1 class="wow fadeInDown" data-wow-delay="2000">Reknowned Services</h1>
@@ -106,7 +91,7 @@ here<button class="btn" onclick="send()">sendemail</button>there
 							<span>Austin's Finest</span>
 						</h2>
 						<p>Permanent, Contract, Project Management and Consulting Services</p>
-						<a href="#about" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">See about us</a>	
+						<a href="#divider" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">About us</a>	
 					    </div>
 				  	</div>
 		        </li>
@@ -247,17 +232,17 @@ here<button class="btn" onclick="send()">sendemail</button>there
 					<div class="col-md-12">
 						<h2 class="wow bounce">Meet the team</h2>
 					</div>
-					<div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+					<div class="col-md-20 col-sm-20 wow fadeIn" data-wow-delay="0.3s">
 						<img src="images/team1.jpg" class="img-responsive" alt="team img">
 						<h4>President</h4>
 						<h3>Cody</h3>
 						<p>Specializes in passive talent attraction. Trusted sourcing partner for 10 years.</p>
 						 <ul class="social-icon text-center">
-           					<li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
+           					<li><a href="https://www.facebook.com/cody.cox.1044" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
           					 <li><a href="https://twitter.com/codycox22" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
           					 <li><a href="https://linkedin.com/in/cox22" class="wow fadeIn fa fa-linkedin" data-wow-delay="2s"></a></li>
        					 </ul>
-					</div>
+					</div><!--
 					<div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.6s">
 						<img src="images/team3.jpg" class="img-responsive" alt="team img">
 						<h4>Account Executive</h4>
@@ -279,7 +264,7 @@ here<button class="btn" onclick="send()">sendemail</button>there
           					 <li><a href="https://twitter.com/codycox22" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
          					 <li><a href="https://linkedin.com/in/cox22" class="wow fadeInUp fa fa-linkedin" data-wow-delay="2s"></a></li>
        					 </ul>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -300,7 +285,7 @@ here<button class="btn" onclick="send()">sendemail</button>there
 								<input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
 							</div>
 							<div class="col-md-2 col-sm-2">
-								<input name="submit" type="submit" class="form-control" id="submit" value="Sign Up" onsubmit="sendEmail()">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Sign Up" onsubmit="signUp()">
 								
 							</div>
 							<div class="col-md-3 col-sm-3"></div>
@@ -483,9 +468,9 @@ here<button class="btn" onclick="send()">sendemail</button>there
 						<h2><strong>Local</strong> to Austin</h2>
 						<p>Specialized and local. Here to serve.</p>
 						<ul class="social-icon">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
-							<li><a href="#" class="fa fa-instagram"></a></li>
+							<li><a href="https://www.facebook.com/cody.cox.1044" class="fa fa-facebook"></a></li>
+							<li><a href="https://twitter.com/codycox22" class="fa fa-twitter"></a></li>
+          					 <li><a href="https://linkedin.com/in/cox22" class="fa fa-linkedin"></a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
@@ -497,7 +482,7 @@ here<button class="btn" onclick="send()">sendemail</button>there
 						</address>
 					</div>
 					<form action="https://formspree.io/james.horton2337@gmail.com" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
-					<input type="hidden" name="_next" value="//calcotestudios.com/coxstaffing/thanks.html" />
+					<input type="hidden" id="_next" name="_next" value="//calcotestudios.com/coxstaffing/thanks.html" />
 							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
 								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
 							</div>
@@ -532,12 +517,15 @@ here<button class="btn" onclick="send()">sendemail</button>there
 					</div>
 					<div class="col-md-4 col-sm-5">
 						<ul class="social-icon">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="https://www.facebook.com/cody.cox.1044" class="fa fa-facebook"></a></li>
+							<li><a href="https://twitter.com/codycox22" class="fa fa-twitter"></a></li>
+							<li><a href="https://linkedin.com/in/cox22" class="fa fa-linkedin"></a></li>
+							<!--
 							<li><a href="#" class="fa fa-instagram"></a></li>
 							<li><a href="#" class="fa fa-pinterest"></a></li>
 							<li><a href="#" class="fa fa-google"></a></li>
 							<li><a href="#" class="fa fa-github"></a></li>
+							-->
 						</ul>
 					</div>
 				</div>
