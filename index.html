@@ -27,6 +27,15 @@
 <script src="scripts/smtp.js"></script>
 <script type="text/javascript">
 
+function send() {
+$.ajax({
+    url: "https://formspree.io/james.horton2337@gmail.com", 
+    method: "POST",
+    data: {message: "hello!"},
+    dataType: "json"
+});
+}
+
 
 function sendEmail() {
 alert("hi");
@@ -74,7 +83,7 @@ james 1d26d41c-e230-4ad8-b004-fc210659da2f */
 		<section id="home" class="text-center">
 		  <div class="templatemo_headerimage">
 		    <div class="flexslider">
-here<button class="btn" onclick="sendEmail()">sendemail</button>there
+here<button class="btn" onclick="send()">sendemail</button>there
 		      <ul class="slides">
 		        <li>
 		        	<img src="images/slider/1.jpg" alt="Slide 1">
@@ -489,6 +498,7 @@ here<button class="btn" onclick="sendEmail()">sendemail</button>there
 					</div>
 					<form action="https://formspree.io/james.horton2337@gmail.com" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
 					<input type="hidden" name="_next" value="calcotestudios.com/coxstaffing/thanks.html" />
+					<input type="text" name="_replyto" placeholder="leecalcote@me.com" />
 							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
 								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
 							</div>
