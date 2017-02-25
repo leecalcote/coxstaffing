@@ -21,6 +21,27 @@
 		<!-- custom -->
 		<link rel="stylesheet" href="css/style.css">
 
+<script type="text/javascript">function test() {
+	alert("test");
+}</script>	
+<script src="scripts/smtp.js"></script>
+<script type="text/javascript">
+
+
+function sendEmail() {
+alert("hi");
+Email.send("james.horton2337@gmail.com",
+"james.horton2337@gmail.com",
+"This is a subject",
+"this is the body",
+{token: "1d26d41c-e230-4ad8-b004-fc210659da2f"});
+}
+
+/* 
+yahoo d3b7c265-8d5b-43f1-9cd6-e4c689c7f4b3
+james 1d26d41c-e230-4ad8-b004-fc210659da2f */
+
+</script>
 	</head>
 	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
@@ -53,6 +74,7 @@
 		<section id="home" class="text-center">
 		  <div class="templatemo_headerimage">
 		    <div class="flexslider">
+here<button class="btn" onclick="sendEmail()">sendemail</button>there
 		      <ul class="slides">
 		        <li>
 		        	<img src="images/slider/1.jpg" alt="Slide 1">
@@ -269,7 +291,8 @@
 								<input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
 							</div>
 							<div class="col-md-2 col-sm-2">
-								<input name="submit" type="submit" class="form-control" id="submit" value="Sign Up">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Sign Up" onsubmit="sendEmail()">
+								
 							</div>
 							<div class="col-md-3 col-sm-3"></div>
 						</form>
@@ -464,7 +487,7 @@
 							<p><i class="fa fa-envelope-o too-icon"></i> Cody@CoxStaffing.com</p>
 						</address>
 					</div>
-					<form action="#" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
+					<form action="https://formspree.io/james.horton2337@gmail.com" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
 							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
 								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
 							</div>
